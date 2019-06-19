@@ -1,0 +1,37 @@
+section.hero.is-fullheight#background-chichen {
+  background-image: url(https://i.imgur.com/rH8Nhpj.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+  div.hero-body {
+
+    div.container {
+
+      figure.image {
+        width: 100%;
+        margin: 0 auto;
+      }
+      strong {
+        font-weight: 800;
+        letter-spacing: 5px;
+        font-family: $bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.hero.is-fullheight#background-chichen {
+    div.hero-body {
+      div.container {
+        section.section {
+          button.button {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+}

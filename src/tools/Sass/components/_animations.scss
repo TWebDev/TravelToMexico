@@ -1,0 +1,8 @@
+@keyframes open {
+  0% {
+    z-index: 100;
+  }
+  90% {
+    z-index: inherit;
+  }
+}
