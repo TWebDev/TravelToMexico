@@ -4,7 +4,7 @@
 $red: #DD6A67;
 $yellow: #E4C92E;
 $green: #80C6BE;
-$grey: #333333;
+$grey: #2F3239;
 $white-ter: #DDDDDD;
 $bold: 'Nunito Sans', sans-serif;
 
@@ -22,6 +22,7 @@ $input-shadow: none;
 @import "./components/mainhero";
 @import "./components/animations";
 @import "./components/footer"; 
+@import "./components/form";
 
 body {
   color: $white-ter;

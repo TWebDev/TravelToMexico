@@ -29,13 +29,13 @@ const Navbar = () => {
 
   return ( 
     <React.Fragment>
-      <section className="hero">
+      <section className="hero is-medium">
           <div className="hero-body">
             <div className="container">
               <h1 className="title is-size-2">Choose your destination</h1>
               <nav className="level">
-                {destinationList.map((item) => 
-                  <div className="level-item has-text-centered">
+                {destinationList.map((item, i) => 
+                  <div className="level-item has-text-centered" key={i}>
                     <a href="/">
                       <Figure
                         Path={item.Path}
