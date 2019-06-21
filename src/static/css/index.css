@@ -9147,7 +9147,7 @@ section.hero.is-fullheight#background-chichen {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
 }
 section.hero.is-fullheight#background-chichen div.hero-body div.container figure.image {
   width: 100%;
@@ -9162,6 +9162,137 @@ section.hero.is-fullheight#background-chichen div.hero-body div.container strong
 @media screen and (max-width: 768px) {
   section.hero.is-fullheight#background-chichen div.hero-body div.container section.section button.button {
     font-size: medium;
+  }
+}
+#cancun {
+  background-image: url(https://i.imgur.com/4M6hnJD.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+#cancun div.container {
+  padding: 10rem 0;
+}
+#cancun div.container section {
+  width: 40%;
+}
+#cancun div.container section p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#cabo {
+  background-image: url(https://i.imgur.com/Iu5b5ou.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+#cabo div.container {
+  padding: 10rem 0;
+}
+#cabo div.container section {
+  width: 40%;
+}
+#cabo div.container section p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#vallarta {
+  background-image: url(https://i.imgur.com/phTLSJc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+#vallarta div.container {
+  padding: 10rem 0;
+}
+#vallarta div.container section {
+  width: 40%;
+}
+#vallarta div.container section p {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  #cancun {
+    background-image: url(https://i.imgur.com/4M6hnJD.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  }
+  #cancun div.container {
+    padding: 10rem 0;
+  }
+  #cancun div.container section {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+  }
+  #cancun div.container section p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px !important;
+    color: white !important;
+  }
+  #cancun div.container section p strong {
+    color: #E4C92E !important;
+  }
+  #cancun div.container section button.button {
+    width: 100%;
+  }
+
+  #cabo {
+    background-image: url(https://i.imgur.com/Iu5b5ou.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  }
+  #cabo div.container {
+    padding: 10rem 0;
+  }
+  #cabo div.container section {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+  }
+  #cabo div.container section p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px !important;
+    color: white !important;
+  }
+  #cabo div.container section p strong {
+    color: #E4C92E !important;
+  }
+  #cabo div.container section button.button {
+    width: 100%;
+  }
+
+  #vallarta {
+    background-image: url(https://i.imgur.com/phTLSJc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  }
+  #vallarta div.container {
+    padding: 10rem 0;
+  }
+  #vallarta div.container section.is-pulled-right {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    float: none !important;
+  }
+  #vallarta div.container section.is-pulled-right p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px !important;
+    color: white !important;
+  }
+  #vallarta div.container section.is-pulled-right p strong {
+    color: #E4C92E !important;
+  }
+  #vallarta div.container section.is-pulled-right button.button {
+    width: 100%;
   }
 }
 div.grid {
@@ -9185,6 +9316,10 @@ div.grid div.main-section section.hero div.hero-body div.container h1.title.is-s
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
+}
+div.grid div.main-section section.hero div.hero-body div.container nav.level div.level-item.has-text-centered:hover {
+  background: #464b55;
+  transition: 0.5s ease-in-out;
 }
 div.grid div.form {
   grid-column-start: 3;
@@ -9233,28 +9368,28 @@ div.grid div.form section.hero div.hero-body div.container h1 {
     z-index: inherit;
   }
 }
-div.grid.is-absolute div.main-section footer.footer {
+footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 20vh;
 }
-div.grid.is-absolute div.main-section footer.footer div.content figure {
+footer.footer div.content figure {
   width: 20rem;
   height: auto;
   margin: 0 auto;
 }
-div.grid.is-absolute div.main-section footer.footer div.content nav.level {
-  margin-top: 20px;
+footer.footer div.content nav.level {
+  margin: 0 auto;
 }
-div.grid.is-absolute div.main-section footer.footer div.content nav.level div.level-item.has-text-centered h6 {
+footer.footer div.content nav.level div.level-item.has-text-centered h6 {
   font-weight: 200;
   color: grey;
   font-size: 14px;
 }
 
 @media screen and (max-width: 1024px) {
-  div.grid div.main-section footer.footer {
+  footer.footer {
     display: none;
   }
 }
@@ -9292,6 +9427,32 @@ button.button.is-primary.has-text-dark.is-large {
   margin-top: 2rem;
 }
 
+div.destination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2F3239;
+  z-index: 50;
+}
+div.destination nav.level {
+  width: 60%;
+}
+div.destination nav.level div.level-left div.level-item {
+  width: 280px;
+  height: auto;
+  padding: 2rem;
+}
+div.destination nav.level div.level-item.has-text-centered h1 {
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 768px) {
+  div.destination nav.level {
+    width: 100%;
+  }
+}
 body {
   color: #DDDDDD;
 }

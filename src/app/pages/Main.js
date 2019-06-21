@@ -3,11 +3,16 @@ import Figure from '../components/Figure';
 import Logo from '../../static/images/svg/TM_Logo_1SVG.svg'
 import Navbar from '../containers/Navbar';
 import Form from '../containers/Form';
+import { Route } from 'react-router-dom';
+import Cabo from '../pages/Cabo';
+import Cancun from '../pages/Cancun';
+import Vallarta from '../pages/Vallarta';
 
 const Main = (props) => {
   let
   {
-    Validate
+    Validate,
+    clickHandler
   } = props;
 
   return ( 
@@ -25,7 +30,9 @@ const Main = (props) => {
               </div>
             </div>
           </nav>
-          <Navbar>            
+          <Navbar
+            clickHandler={clickHandler}
+          >            
           </Navbar>
         </div>
         <div className="form">
@@ -39,6 +46,9 @@ const Main = (props) => {
           </section>
         </div>
       </div>
+      <Route path='/cabo' component={Cabo}/>
+      <Route path='/vallarta' component={Vallarta}/>
+      <Route path='/cancun' component={Cancun}/>
     </React.Fragment>
   );
 }

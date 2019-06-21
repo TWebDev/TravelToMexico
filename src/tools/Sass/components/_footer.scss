@@ -1,5 +1,4 @@
-div.grid.is-absolute {
-  div.main-section {
+
     footer.footer {
       position: absolute;
       bottom:0;
@@ -12,7 +11,7 @@ div.grid.is-absolute {
           margin:0 auto;
         }
         nav.level {
-          margin-top: 20px;
+          margin: 0 auto;
           div.level-item.has-text-centered {
             h6 {
               font-weight: 200;
@@ -23,15 +22,10 @@ div.grid.is-absolute {
         }
       }
     }
-  }
-}
 
 @media screen and (max-width: 1024px) {
-  div.grid {
-    div.main-section {
+
       footer.footer {
         display: none;
       }
     }
-  }
-}

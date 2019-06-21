@@ -1,30 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Figure from '../components/Figure';
 import Footer from './Footer';
 
-const Navbar = () => {
+const Navbar = (clickHandler) => {
 
   let destinationList = [
     {
-      Path: 'https://i.imgur.com/Yuscuya.png',
-      Alt:'los-cabos',
-      Text: 'Los Cabos'
+      Path:'https://i.imgur.com/Yuscuya.png',
+      Alt: 'los-cabos',
+      Text:'Los Cabos',
+      Link:'/cabo'
     },
     {
-      Path: 'https://i.imgur.com/36GoDJd.png',
-      Alt:'puerto-vallarta',
-      Text: 'Pto. Vallarta'
+      Path:'https://i.imgur.com/36GoDJd.png',
+      Alt: 'puerto-vallarta',
+      Text:'Pto. Vallarta',
+      Link:'/vallarta'
     },
     {
-      Path: 'https://i.imgur.com/rQD559f.png',
-      Alt:'cancun',
-      Text: 'Cancun'
+      Path:'https://i.imgur.com/rQD559f.png',
+      Alt: 'cancun',
+      Text:'Cancun',
+      Link:'/cancun',    
     },
-    {
-      Path: 'https://i.imgur.com/7Jehgwn.png',
-      Alt:'loreto',
-      Text: 'Loreto'
-    }
   ]
 
   return ( 
@@ -36,22 +35,21 @@ const Navbar = () => {
               <nav className="level">
                 {destinationList.map((item, i) => 
                   <div className="level-item has-text-centered" key={i}>
-                    <a href="/">
+                    <Link to={item.Link}>
                       <Figure
                         Path={item.Path}
                         Alt={item.Alt}
                       >                        
                       </Figure>
                       <h1 className='title has-text-primary is-size-4'>{item.Text}</h1>
-                    </a>
+                    </Link>
                   </div>
                 )}
               </nav>
             </div>
           </div>
         </section>
-        <Footer>          
-        </Footer>
+        <Footer></Footer>        
     </React.Fragment>
   );
 }

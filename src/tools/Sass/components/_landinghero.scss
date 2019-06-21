@@ -3,7 +3,7 @@ section.hero.is-fullheight#background-chichen {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
 
   div.hero-body {
 
@@ -30,6 +30,150 @@ section.hero.is-fullheight#background-chichen {
           button.button {
             font-size: medium;
           }
+        }
+      }
+    }
+  }
+}
+
+#cancun {
+  background-image: url(https://i.imgur.com/4M6hnJD.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+
+  div.container {
+    padding: 10rem 0;
+    section {
+      width: 40%;
+
+      p {
+        font-family: $bold;
+      }
+    }
+  }
+}
+
+#cabo {
+  background-image: url(https://i.imgur.com/Iu5b5ou.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+
+  div.container {
+    padding: 10rem 0;
+    section {
+      width: 40%;
+      
+      p {
+        font-family: $bold;
+      }
+    }
+  }
+}
+
+#vallarta {
+  background-image: url(https://i.imgur.com/phTLSJc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+
+  div.container {
+    padding: 10rem 0;
+    section {
+      width: 40%;
+      
+      p {
+        font-family: $bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #cancun {
+    background-image: url(https://i.imgur.com/4M6hnJD.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  
+    div.container {
+      padding: 10rem 0;      
+      section {        
+        width: 80%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        p {
+          font-family: $bold;
+          font-size: 13px !important;
+          color: white !important;
+
+          strong {
+            color: $primary !important;
+          }
+        }
+        button.button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  #cabo {
+    background-image: url(https://i.imgur.com/Iu5b5ou.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  
+    div.container {
+      padding: 10rem 0;      
+      section {        
+        width: 80%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        p {
+          font-family: $bold;
+          font-size: 13px !important;
+          color: white !important;
+
+          strong {
+            color: $primary !important;
+          }
+        }
+        button.button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  #vallarta {
+    background-image: url(https://i.imgur.com/phTLSJc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+  
+    div.container {
+      padding: 10rem 0;      
+      section.is-pulled-right {        
+        width: 80%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        float: none !important;
+        p {
+          font-family: $bold;
+          font-size: 13px !important;
+          color: white !important;
+
+          strong {
+            color: $primary !important;
+          }
+        }
+        button.button {
+          width: 100%;
         }
       }
     }

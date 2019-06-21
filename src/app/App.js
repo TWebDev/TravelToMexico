@@ -17,8 +17,10 @@ class App extends Component {
   }
 
   openLandingPage () {
+    var validator = this.state.openLanding;
+    validator = !validator;
     this.setState({
-      openLanding: true
+      openLanding: validator
     })
   }
 
@@ -29,7 +31,9 @@ class App extends Component {
           clickHandler={e => this.openLandingPage(e)}
           Validate={this.state.openLanding}>
         </LandingHero>
-        <Main Validate={this.state.openLanding}></Main>
+        <Main 
+          Validate={this.state.openLanding}
+        ></Main>
       </React.Fragment>
     );
   }
