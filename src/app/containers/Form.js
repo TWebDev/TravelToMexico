@@ -60,7 +60,7 @@ const Form = () => {
             _Id=""
             ></Select>
             <Select
-            Options={["When are coming to Mexico?","","",""]}
+            Options={["When are coming to Mexico?","January - April","May - August","September - December"]}
             Name=""
             _Id=""
             ></Select>

@@ -1,34 +1,31 @@
-div.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-input {
-  margin: 1rem 0;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, .30), 0 15px 12px rgba(0, 0, 0, .22) !important;
-}
-
-#flexed-inputs {
-  justify-content: space-between;
-  div {
-    width: 46%;    
+div#mc_embed_signup {
+  form {
+    div.is-flex {
+      justify-content: space-between;
+      div.mc-field-group {
+        margin: 0;
+        &:nth-of-type(1){
+          margin-right: 10px;
+        }
+        input {
+          width: 100%;
+        }
+      }
+    }
+    div.mc-field-group {
+      margin: 10px 0;
+    }
+    #selects {
+      display: flex;
+      justify-content: space-between;
+      div.select {
+        select {
+          width: 80%;
+        }
+      }
+    }
+    button {
+      width: 100%;
+    }
   }
-}
-
-#selects {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-
-  div.select {
-    width: 46%;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, .30), 0 15px 12px rgba(0, 0, 0, .22) !important;
-    background: white;
-  }
-}
-
-button.button.is-primary.has-text-dark.is-large {
-  width: 100%;
-  margin-top: 2rem;
 }

@@ -20,7 +20,7 @@ $input-shadow: none;
 @import "../../../node_modules/bulma/bulma.sass";
 @import "./components/landinghero";
 @import "./components/mainhero";
-@import "./components/animations";
+@import "./components/navbar";
 @import "./components/footer"; 
 @import "./components/form";
 @import './components//destinations';
@@ -59,4 +59,12 @@ body {
   left: 0%;
   right: 0%;
   bottom: 0%;
+}
+
+.columns:last-child {
+  margin-bottom: 0;
+}
+
+.columns {
+  margin: 0;
 }

@@ -1,27 +1,20 @@
-
-    footer.footer {
-      div.content {
-        figure {
-          width: 20rem;
-          height: auto;
-          margin:0 auto;
-        }
-        nav.level {
-          margin: 0 auto;
-          div.level-item.has-text-centered {
-            h6 {
-              font-weight: 200;
-              color: grey;
-              font-size: 14px;
-            }
+footer.footer {
+  div.columns {
+    div.column {
+      figure {
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+      }
+      div.columns {
+        div.column {
+          text-align: center;
+          p {
+            font-size: 10px;
+            color: lighten($grey, 30)
           }
         }
       }
     }
-
-@media screen and (max-width: 1024px) {
-
-      footer.footer {
-        display: none;
-      }
-    }
+  }  
+}
