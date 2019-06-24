@@ -48,8 +48,8 @@ const Navbar = (clickHandler) => {
               </nav>
             </div>
           </div>
-        </section>
-        <Footer></Footer>        
+          <Footer></Footer>  
+        </section>              
     </React.Fragment>
   );
 }

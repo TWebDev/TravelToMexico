@@ -9295,53 +9295,35 @@ section.hero.is-fullheight#background-chichen div.hero-body div.container strong
     width: 100%;
   }
 }
-div.grid {
-  display: grid;
-  grid-template: 1fr/repeat(3, 1fr);
-  height: 100vh;
+div.columns div.main-section {
+  background: #2F3239;
 }
-div.grid div.main-section {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: #2F3239;
-  height: 100vh;
-}
-div.grid div.main-section nav.level div.level-left div.level-item {
+div.columns div.main-section nav.level div.level-left div.level-item {
   width: 280px;
   padding: 2rem;
 }
-div.grid div.main-section section.hero div.hero-body div.container h1.title.is-size-2 {
+div.columns div.main-section section.hero div.hero-body div.container h1.title.is-size-2 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-div.grid div.main-section section.hero div.hero-body div.container nav.level div.level-item.has-text-centered:hover {
+div.columns div.main-section section.hero div.hero-body div.container nav.level div.level-item.has-text-centered:hover {
   background: #464b55;
   transition: 0.5s ease-in-out;
 }
-div.grid div.form {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-div.grid div.form section.hero div.hero-body div.container h1 {
+div.columns div.form section.hero div.hero-body div.container h1 {
   text-transform: capitalize;
   text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 @media screen and (max-width: 1024px) {
-  div.grid {
-    display: grid;
-    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-  }
-  div.grid div.main-section {
-    grid-column: 1/3;
-    grid-row: 1/2;
+  div.columns div.main-section {
     background-color: #2F3239;
     height: fit-content;
   }
-  div.grid section.hero div.hero-body div.container h1.title.is-size-2 {
+  div.columns section.hero div.hero-body div.container h1.title.is-size-2 {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 800;
     text-align: center;
@@ -9349,14 +9331,12 @@ div.grid div.form section.hero div.hero-body div.container h1 {
     letter-spacing: 5px;
     font-size: 1rem !important;
   }
-  div.grid section.hero div.hero-body div.container nav.level div.level-item a figure.image {
+  div.columns section.hero div.hero-body div.container nav.level div.level-item a figure.image {
     width: 80px;
     height: auto;
     margin: 0 auto;
   }
-  div.grid div.form {
-    grid-column: 1/3;
-    grid-row: 2/3;
+  div.columns div.form {
     background: #80C6BE;
   }
 }
@@ -9367,12 +9347,6 @@ div.grid div.form section.hero div.hero-body div.container h1 {
   90% {
     z-index: inherit;
   }
-}
-footer.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 20vh;
 }
 footer.footer div.content figure {
   width: 20rem;

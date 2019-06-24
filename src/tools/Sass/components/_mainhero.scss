@@ -1,13 +1,6 @@
-div.grid {
-  display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
-  height: 100vh;
-
+div.columns {
   div.main-section {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: $grey;
-    height: 100vh;
+    background: $grey;
     nav.level {
       div.level-left {
         div.level-item {
@@ -39,9 +32,6 @@ div.grid {
     }
   }
   div.form {
-    grid-column-start: 3;
-    grid-column-end: 4;
-
     section.hero {
       div.hero-body {
         div.container {
@@ -56,13 +46,8 @@ div.grid {
 }
 
 @media screen and (max-width: 1024px) {
-  div.grid {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  
+  div.columns {
     div.main-section {
-      grid-column: 1 / 3;
-      grid-row: 1 / 2;
       background-color: $grey;
       height: fit-content;
     }
@@ -94,8 +79,6 @@ div.grid {
     }
     
     div.form {
-      grid-column: 1 / 3;
-      grid-row: 2 / 3; 
       background: $green;
     }
   }

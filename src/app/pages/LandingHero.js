@@ -12,8 +12,8 @@ const LandingHero = (props) => {
   return ( 
     <React.Fragment>
       <section className="hero is-fullheight is-relative" id="background-chichen">
-        <div className="hero-body">
-          <div className={Validate ? ("is-hidden") : ("container")}>
+        <div className={Validate ? ("is-hidden") : ("hero-body")}>
+          <div className="container">
             <Figure
               Path={Logo}
               Alt="Travel-To-Mexico-logo"

@@ -17,8 +17,8 @@ const Main = (props) => {
 
   return ( 
     <React.Fragment>
-      <div className={Validate ? ("grid is-absolute") : ("is-hidden")}>
-        <div className="main-section is-relative z-depth-5">
+      <div className={Validate ? ("columns is-desktop is-absolute") : ("is-hidden")}>
+        <div className="main-section column is-paddingless is-two-thirds is-marginless is-relative z-depth-5">
           <nav className="level">
             <div className="level-left">
               <div className="level-item">
@@ -35,7 +35,7 @@ const Main = (props) => {
           >            
           </Navbar>
         </div>
-        <div className="form">
+        <div className="form column is-paddingless">
           <section className="hero">
             <div className="hero-body">
               <div className="container">
