@@ -1,0 +1,23 @@
+div.columns#destination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  div.column {
+    div.section {   
+      background-color: rgba(0, 0, 0, 0.6);
+      p {
+        font-weight: lighter;
+        strong {
+          margin-right: 10px;
+        }
+      }  
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  div.columns#destination {
+    position: initial; 
+  }
+}

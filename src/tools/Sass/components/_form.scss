@@ -1,31 +1,41 @@
-div#mc_embed_signup {
-  form {
-    div.is-flex {
-      justify-content: space-between;
+div.hero-body.form-body {  
+  flex-direction: column;
+  justify-content: center;
+  div#mc_embed_signup {
+    form {
+      div.is-flex {
+        justify-content: space-between;
+        div.mc-field-group {
+          margin: 0;
+          &:nth-of-type(1){
+            margin-right: 10px;
+          }
+          input {
+            width: 100%;
+          }
+        }
+      }
       div.mc-field-group {
-        margin: 0;
-        &:nth-of-type(1){
-          margin-right: 10px;
-        }
-        input {
-          width: 100%;
+        margin: 10px 0;
+      }
+      #selects {
+        display: flex;
+        justify-content: space-between;
+        div.select {
+          select {
+            width: 80%;
+          }
         }
       }
-    }
-    div.mc-field-group {
-      margin: 10px 0;
-    }
-    #selects {
-      display: flex;
-      justify-content: space-between;
-      div.select {
-        select {
-          width: 80%;
-        }
+      button {
+        width: 100%;
       }
     }
-    button {
-      width: 100%;
-    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.hero.is-fullheight.is-form {
+    min-height: fit-content !important;
   }
 }

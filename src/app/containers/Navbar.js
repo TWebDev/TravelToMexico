@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Figure from '../components/Figure';
-import Footer from './Footer';
 
 const Navbar = (clickHandler) => {
 

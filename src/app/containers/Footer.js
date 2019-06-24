@@ -19,10 +19,10 @@ const Footer = () => {
                 <a href="tel:9841305531"><p>(123)-456-7890</p></a>
               </div>
               <div className="column">
-                <a href="mailto:sales@traveltomexico.com" target="_blank"><p>sales@traveltomexico.com</p></a>
+                <a href="mailto:sales@traveltomexico.com" target="_blank" rel="noopener noreferrer"><p>sales@traveltomexico.com</p></a>
               </div>
               <div className="column">
-                <Link to="/"><p>www.traveltomexico.com</p></Link>
+                <Link to="/welcome"><p>www.traveltomexico.com</p></Link>
               </div>
               <div className="column">
                 <p>&copy; Tafer & Garza Blanca</p>

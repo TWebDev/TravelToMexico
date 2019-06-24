@@ -9212,38 +9212,72 @@ footer.footer div.columns div.column div.columns div.column p {
   color: #747c8d;
 }
 
-div#mc_embed_signup form div.is-flex {
+div.hero-body.form-body {
+  flex-direction: column;
+  justify-content: center;
+}
+div.hero-body.form-body div#mc_embed_signup form div.is-flex {
   justify-content: space-between;
 }
-div#mc_embed_signup form div.is-flex div.mc-field-group {
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group {
   margin: 0;
 }
-div#mc_embed_signup form div.is-flex div.mc-field-group:nth-of-type(1) {
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group:nth-of-type(1) {
   margin-right: 10px;
 }
-div#mc_embed_signup form div.is-flex div.mc-field-group input {
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group input {
   width: 100%;
 }
-div#mc_embed_signup form div.mc-field-group {
+div.hero-body.form-body div#mc_embed_signup form div.mc-field-group {
   margin: 10px 0;
 }
-div#mc_embed_signup form #selects {
+div.hero-body.form-body div#mc_embed_signup form #selects {
   display: flex;
   justify-content: space-between;
 }
-div#mc_embed_signup form #selects div.select select {
+div.hero-body.form-body div#mc_embed_signup form #selects div.select select {
   width: 80%;
 }
-div#mc_embed_signup form button {
+div.hero-body.form-body div#mc_embed_signup form button {
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  section.hero.is-fullheight.is-form {
+    min-height: fit-content !important;
+  }
+}
+div.columns#destination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+div.columns#destination div.column div.section {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+div.columns#destination div.column div.section p {
+  font-weight: lighter;
+}
+div.columns#destination div.column div.section p strong {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  div.columns#destination {
+    position: initial;
+  }
+}
 body {
   color: #DDDDDD;
 }
 
 .title, .subtitle {
   color: inherit;
+}
+
+.has-text-shadow {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .z-depth-1 {

@@ -12,8 +12,7 @@ import Footer from '../containers/Footer';
 const Main = (props) => {
   let
   {
-    Validate,
-    clickHandler
+    Validate
   } = props;
 
   return ( 
@@ -25,7 +24,7 @@ const Main = (props) => {
               <nav className="level">
                 <div className="level-left">
                   <div className="level-item">
-                    <Link to="/">
+                    <Link to="/welcome">
                       <Figure
                         Path={Logo}
                         Alt="Travel_To_Mexico-logo"
@@ -35,24 +34,16 @@ const Main = (props) => {
                   </div>
                 </div>
               </nav>
-                  <Route path="/" component={Navbar}/>
-                  <Route path="/Cabo" component={Cabo}/>
-                  <Route path="/Cancun" component={Cancun}/>
-                  <Route path="/Vallarta" component={Vallarta}/>                               
+                  <Route path="/welcome" component={Navbar}/>
+                  <Route path="/cabo" component={Cabo}/>
+                  <Route path="/cancun" component={Cancun}/>
+                  <Route path="/vallarta" component={Vallarta}/>   
+                  <Route path="/book" component={Form}/>
                 <Footer></Footer>            
             </section>
           </div>
           <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
-            <section className="hero is-fullheight">
-              <div className="hero-body">
-                <div className="container">
-                  <h1 className="title is-size-2 has-text-primary">
-                    Start Booking!
-                  </h1>
-                  <Form></Form>
-                </div>
-              </div>
-            </section>
+            <Form></Form>
           </div>
         </div>
       </div>
