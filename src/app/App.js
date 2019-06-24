@@ -9,7 +9,7 @@ class App extends Component {
         name:'',
         last:'',
         phone:'',
-        email:''
+        email:'',
       },
       openLanding: false
     }
@@ -88,12 +88,12 @@ class App extends Component {
 
   updateEmail(e) {
     let emailBool;
-    let formFields = Object.assign({}, this.state.formFields);    
+    let formFields = Object.assign({}, this.state.formFields);
+    var mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
 
       formFields.email = e.target.value;
-      formFields.email = formFields.email.replace(/ /g,'');
-      formFields.email.length ? emailBool= true : emailBool = false;
-    var mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      formFields.email = formFields.email.replace(/ /g,"");
+      formFields.email.length ? emailBool = true : emailBool = false;    
       mailRegex.test(formFields.email) ? emailBool = true : emailBool = false;
     
     this.setState({
