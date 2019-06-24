@@ -3,12 +3,24 @@ import Input from '../components/Form/Input';
 import Select from '../components/Form/Select';
 import Button from '../components/Button';
 
-const Form = () => {
+const Form = (props) => {
+  let
+  {
+    nameHandler,
+    lastHandler,
+    phoneHandler,
+    emailHandler,
+
+    nameValue,
+    lastvalue,
+    phoneValue,
+    emailValue
+  } = props;
   return ( 
     <React.Fragment>
       <section className="hero is-fullheight is-form">
         <div className="hero-body form-body">        
-          <h1 className="title is-size-2 has-text-primary">
+          <h1 className="title is-size-2 has-text-primary has-text-shadow">
             Book Now!
           </h1>          
           <div id="mc_embed_signup">
@@ -24,19 +36,21 @@ const Form = () => {
                 <div className="mc-field-group">
                   <Input        
                   Type="text"
-                  Name="first-name"
+                  Name="name"
                   _Id=""
                   Placeholder="First Name"
-                  formHandler=""            
+                  formHandler={nameHandler}
+                  Value={nameValue}          
                   ></Input>
                 </div>
                 <div className="mc-field-group">
                   <Input        
                   Type="text"
-                  Name="last-name"
+                  Name="last"
                   _Id=""
                   Placeholder="Last Name"
-                  formHandler=""            
+                  formHandler={lastHandler}
+                  Value={lastvalue}            
                   ></Input>
                 </div>
               </div>
@@ -46,7 +60,8 @@ const Form = () => {
                 Name="phone"
                 _Id=""
                 Placeholder="123-456-7890"
-                formHandler=""            
+                formHandler={phoneHandler}  
+                Value={phoneValue}          
                 ></Input>
               </div>
               <div className="mc-field-group">
@@ -55,7 +70,8 @@ const Form = () => {
                 Name="email"
                 _Id=""
                 Placeholder="me@mailme.com"
-                formHandler=""            
+                formHandler={emailHandler}
+                Value={emailValue}           
               ></Input>
               </div>    
               <div className="mc-field-group" id="selects">

@@ -12,14 +12,23 @@ import Footer from '../containers/Footer';
 const Main = (props) => {
   let
   {
-    Validate
+    Validate,
+    nameHandler,
+    lastHandler,
+    phoneHandler,
+    emailHandler,
+
+    nameValue,
+    lastvalue,
+    phoneValue,
+    emailValue
   } = props;
 
   return ( 
     <React.Fragment>
       <div className={Validate ? ("hero is-absolute") : ("is-hidden")}>
         <div className="columns is-desktop is-marginless">
-          <div className="column is-paddingless is-two-thirds-widescreen is-full-desktop has-background-grey">
+          <div className="column is-paddingless is-two-thirds-widescreen is-full-desktop has-background-grey z-depth-5">
             <section className="hero is-fullheight">
               <nav className="level">
                 <div className="level-left">
@@ -43,7 +52,17 @@ const Main = (props) => {
             </section>
           </div>
           <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
-            <Form></Form>
+            <Form
+              nameHandler={nameHandler}
+              lastHandler={lastHandler}
+              phoneHandler={phoneHandler}
+              emailHandler={emailHandler}
+
+              nameValue={nameValue}
+              lastvalue={lastvalue}
+              phoneValue={phoneValue}
+              emailValue={emailValue}
+            ></Form>
           </div>
         </div>
       </div>

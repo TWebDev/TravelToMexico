@@ -7,7 +7,8 @@ const Input = (props) => {
     Name,
     _Id,
     Placeholder,
-    formHandler
+    formHandler,
+    Value
   } = props;
 
   return (
@@ -16,6 +17,7 @@ const Input = (props) => {
         className="input" 
         type={Type}
         name={Name}
+        value={Value}
         id={_Id} 
         placeholder={Placeholder}
         onChange={formHandler}

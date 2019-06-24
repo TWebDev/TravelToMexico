@@ -34,7 +34,7 @@ const Navbar = (clickHandler) => {
           </h1>
           <div className="columns">
             {destinationList.map((item, i) => 
-            <div className="column">
+            <div className="column" key={i}>
               <Link to={item.Link}>
                 <Figure
                   Path={item.Path}
