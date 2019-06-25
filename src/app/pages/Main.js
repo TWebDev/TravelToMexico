@@ -13,10 +13,7 @@ const Main = (props) => {
   let
   {
     Validate,
-    nameHandler,
-    lastHandler,
-    phoneHandler,
-    emailHandler,
+    inputHandler,
 
     nameValue,
     lastvalue,
@@ -53,10 +50,7 @@ const Main = (props) => {
           </div>
           <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
             <Form
-              nameHandler={nameHandler}
-              lastHandler={lastHandler}
-              phoneHandler={phoneHandler}
-              emailHandler={emailHandler}
+              inputHandler={inputHandler}
 
               nameValue={nameValue}
               lastvalue={lastvalue}

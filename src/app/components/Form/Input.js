@@ -7,7 +7,7 @@ const Input = (props) => {
     Name,
     _Id,
     Placeholder,
-    formHandler,
+    inputHandler,
     Value
   } = props;
 
@@ -20,7 +20,7 @@ const Input = (props) => {
         value={Value}
         id={_Id} 
         placeholder={Placeholder}
-        onChange={formHandler}
+        onChange={inputHandler}
       >
       </input>
     </React.Fragment>

@@ -27,78 +27,77 @@ class App extends Component {
     })
   }
 
-  updateName(e) {    
-    let nameBool;
+  updateForm(e) {
     let formFields = Object.assign({}, this.state.formFields);
 
-      formFields.name = e.target.value;
-      formFields.name = formFields.name.replace(/ /g,'');
-      formFields.name.length ? nameBool= true : nameBool = false;
+    switch (e.target.name) {
+      case "name":
+          var nameBool;                
+              formFields.name = e.target.value;
+              formFields.name = formFields.name.replace(/ /g,'');
+              formFields.name.length ? nameBool= true : nameBool = false;
+      
+          this.setState({
+            formFields, nameBool
+          })
+        break;
+  
+      case "last":
+          var lastBool;
+              formFields.last = e.target.value;
+              formFields.last = formFields.last.replace(/ /g,'');
+              formFields.last.length ? lastBool= true : lastBool = false;
 
-    this.setState({
-      formFields, nameBool
-    })
-  }
+          this.setState({
+            formFields, lastBool
+          })
+        break;
+  
+      case "phone":
+          let phoneBool;
+          var invalidChars = /\D+/gm;
+              formFields.phone = e.target.value;
+              formFields.phone = formFields.phone.replace(/ /g,'');
+              formFields.phone.length ? phoneBool = true : phoneBool = false;    
+          var str = formFields.phone;
 
-  updateLast(e) {    
-    let nameBool;
-    let formFields = Object.assign({}, this.state.formFields);
+          if (invalidChars.test(formFields.phone)) {
+            str = str.replace(invalidChars, "");
+            phoneBool = false;
+          }        
+          if (str.length >= 10) {
+                str = str.substring(0 , 10);      
+                str = str.replace(/(\S{3})/g,"$1-");
+                str = str.replace(/-$/,"");
+            var lastFour = str.substr(str.length - 5);
+                lastFour = lastFour.replace("-","");
+                str = str.substring(0,8);
+                str = str + lastFour;
+          } else {
+              phoneBool = false;
+          }
+          formFields.phone = str;
+        
+          this.setState({
+            formFields, phoneBool
+          })
+        break;
+  
+      case "email":
+          let emailBool;
+          var mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+              formFields.email = e.target.value;
+              formFields.email = formFields.email.replace(/ /g,"");  
+              mailRegex.test(formFields.email) ? emailBool = true : emailBool = false;
 
-      formFields.last = e.target.value;
-      formFields.last = formFields.last.replace(/ /g,'');
-      formFields.last.length ? nameBool= true : nameBool = false;
-
-    this.setState({
-      formFields, nameBool
-    })
-  }
-
-  updatePhone(e) {
-    let phoneBool;
-    let formFields = Object.assign({}, this.state.formFields);
-    var invalidChars = /\D+/gm;
-
-      formFields.phone = e.target.value;
-      formFields.phone = formFields.phone.replace(/ /g,'');
-      formFields.phone.length ? phoneBool = true : phoneBool = false;
-    var str = formFields.phone;
-
-    if (invalidChars.test(formFields.phone)) {
-      str = str.replace(invalidChars, "");
-      phoneBool = false;
-    }
-
-    if (str.length >= 10) {
-        str = str.substring(0 , 10);      
-        str = str.replace(/(\S{3})/g,"$1-");
-        str = str.replace(/-$/,"");
-      var lastFour = str.substr(str.length - 5);
-        lastFour = lastFour.replace("-","");
-        str = str.substring(0,8)
-        str = str + lastFour
-    } else {
-        phoneBool = false;
-    }
-    formFields.phone = str;
-
-    this.setState({
-      formFields, phoneBool
-    })
-  }
-
-  updateEmail(e) {
-    let emailBool;
-    let formFields = Object.assign({}, this.state.formFields);
-    var mailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
-
-      formFields.email = e.target.value;
-      formFields.email = formFields.email.replace(/ /g,"");
-      formFields.email.length ? emailBool = true : emailBool = false;    
-      mailRegex.test(formFields.email) ? emailBool = true : emailBool = false;
+          this.setState({
+            formFields, emailBool
+          })
+        break;
     
-    this.setState({
-      formFields, emailBool
-    })
+      default:     
+        break;
+    }
   }
 
   render() { 
@@ -110,10 +109,7 @@ class App extends Component {
         </LandingHero>
         <Main 
           Validate={this.state.openLanding}
-          nameHandler={e => this.updateName(e)}
-          lastHandler={e => this.updateLast(e)}
-          phoneHandler={e => this.updatePhone(e)}
-          emailHandler={e => this.updateEmail(e)}
+          inputHandler={e => this.updateForm(e)}
 
           nameValue={this.state.formFields.name}
           lastvalue={this.state.formFields.last}        

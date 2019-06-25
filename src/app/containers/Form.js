@@ -6,10 +6,7 @@ import Button from '../components/Button';
 const Form = (props) => {
   let
   {
-    nameHandler,
-    lastHandler,
-    phoneHandler,
-    emailHandler,
+    inputHandler,
 
     nameValue,
     lastvalue,
@@ -39,7 +36,7 @@ const Form = (props) => {
                   Name="name"
                   _Id=""
                   Placeholder="First Name"
-                  formHandler={nameHandler}
+                  inputHandler={inputHandler}
                   Value={nameValue}          
                   ></Input>
                 </div>
@@ -49,7 +46,7 @@ const Form = (props) => {
                   Name="last"
                   _Id=""
                   Placeholder="Last Name"
-                  formHandler={lastHandler}
+                  inputHandler={inputHandler}
                   Value={lastvalue}            
                   ></Input>
                 </div>
@@ -60,7 +57,7 @@ const Form = (props) => {
                 Name="phone"
                 _Id=""
                 Placeholder="123-456-7890"
-                formHandler={phoneHandler}  
+                inputHandler={inputHandler}  
                 Value={phoneValue}          
                 ></Input>
               </div>
@@ -70,7 +67,7 @@ const Form = (props) => {
                 Name="email"
                 _Id=""
                 Placeholder="me@mailme.com"
-                formHandler={emailHandler}
+                inputHandler={inputHandler}
                 Value={emailValue}           
               ></Input>
               </div>    
