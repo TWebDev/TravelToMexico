@@ -3,52 +3,78 @@ import Figure from '../components/Figure';
 import Logo from '../../static/images/svg/TM_Logo_1SVG.svg'
 import Navbar from '../containers/Navbar';
 import Form from '../containers/Form';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import Cabo from '../pages/Cabo';
 import Cancun from '../pages/Cancun';
 import Vallarta from '../pages/Vallarta';
+import Footer from '../containers/Footer';
 
 const Main = (props) => {
-  let
+  var
   {
     Validate,
-    clickHandler
+    inputHandler,
+    disabled,
+
+    nameValue,
+    lastvalue,
+    phoneValue,
+    emailValue
   } = props;
 
   return ( 
     <React.Fragment>
-      <div className={Validate ? ("columns is-desktop is-absolute") : ("is-hidden")}>
-        <div className="main-section column is-paddingless is-two-thirds is-marginless is-relative z-depth-5">
-          <nav className="level">
-            <div className="level-left">
-              <div className="level-item">
-                <Figure
-                  Path={Logo}
-                  Alt='Travel-To-Mexico-logo'
-                >                  
-                </Figure>
-              </div>
-            </div>
-          </nav>
-          <Navbar
-            clickHandler={clickHandler}
-          >            
-          </Navbar>
-        </div>
-        <div className="form column is-paddingless">
-          <section className="hero">
-            <div className="hero-body">
-              <div className="container">
-                <h1 className="title is-size-1 has-text-primary">Or start booking</h1>
-                <Form></Form>
-              </div>
-            </div>
-          </section>
+      <div className={Validate ? ("hero is-absolute") : ("is-hidden")}>
+        <div className="columns is-desktop is-marginless">
+          <div className="column is-paddingless is-two-thirds-widescreen is-full-desktop has-background-grey z-depth-5">
+            <section className="hero is-fullheight">
+              <nav className="level">
+                <div className="level-left">
+                  <div className="level-item">
+                    <Link to="/welcome">
+                      <Figure
+                        Path={Logo}
+                        Alt="Travel_To_Mexico-logo"
+                      >                    
+                      </Figure>
+                    </Link>
+                  </div>
+                </div>
+              </nav>
+                  <Route path="/welcome" component={Navbar}/>
+                  <Route path="/cabo" component={Cabo}/>
+                  <Route path="/cancun" component={Cancun}/>
+                  <Route path="/vallarta" component={Vallarta}/>   
+                  <Route 
+                    path="/book" 
+                    render={ () => 
+                      <Form 
+                        inputHandler={inputHandler}
+                        disabled={disabled}
+
+                        nameValue={nameValue}
+                        lastvalue={lastvalue}
+                        phoneValue={phoneValue}
+                        emailValue={emailValue}
+                      ></Form>
+                    }                      
+                  />
+                <Footer></Footer>            
+            </section>
+          </div>
+          <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
+            <Form
+              inputHandler={inputHandler}
+              disabled={disabled}
+
+              nameValue={nameValue}
+              lastvalue={lastvalue}
+              phoneValue={phoneValue}
+              emailValue={emailValue}
+            ></Form>
+          </div>
         </div>
       </div>
-      <Route path='/cabo' component={Cabo}/>
-      <Route path='/vallarta' component={Vallarta}/>
-      <Route path='/cancun' component={Cancun}/>
     </React.Fragment>
   );
 }

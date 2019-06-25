@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Figure from '../components/Figure';
-import Footer from './Footer';
 
 const Navbar = (clickHandler) => {
 
@@ -27,29 +26,30 @@ const Navbar = (clickHandler) => {
   ]
 
   return ( 
-    <React.Fragment>
-      <section className="hero is-medium">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title is-size-2">Choose your destination</h1>
-              <nav className="level">
-                {destinationList.map((item, i) => 
-                  <div className="level-item has-text-centered" key={i}>
-                    <Link to={item.Link}>
-                      <Figure
-                        Path={item.Path}
-                        Alt={item.Alt}
-                      >                        
-                      </Figure>
-                      <h1 className='title has-text-primary is-size-4'>{item.Text}</h1>
-                    </Link>
-                  </div>
-                )}
-              </nav>
+    <React.Fragment>  
+      <div className="columns">
+        <div className="column is-full">
+          <h1 className="title has-text-centered is-size-5-touch">
+          CHOOSE YOUR DESTINATION
+          </h1>
+          <div className="columns">
+            {destinationList.map((item, i) => 
+            <div className="column" key={i}>
+              <Link to={item.Link}>
+                <Figure
+                  Path={item.Path}
+                  Alt={item.Alt}
+                >               
+                </Figure>
+                <h1 className="title has-text-primary has-text-centered is-size-5">
+                  {item.Text}
+                </h1>
+              </Link>
             </div>
+            )}
           </div>
-          <Footer></Footer>  
-        </section>              
+        </div>
+      </div>          
     </React.Fragment>
   );
 }

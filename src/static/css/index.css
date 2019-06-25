@@ -9164,267 +9164,108 @@ section.hero.is-fullheight#background-chichen div.hero-body div.container strong
     font-size: medium;
   }
 }
-#cancun {
-  background-image: url(https://i.imgur.com/4M6hnJD.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: fit-content;
-}
-#cancun div.container {
-  padding: 10rem 0;
-}
-#cancun div.container section {
-  width: 40%;
-}
-#cancun div.container section p {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-#cabo {
-  background-image: url(https://i.imgur.com/Iu5b5ou.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: fit-content;
-}
-#cabo div.container {
-  padding: 10rem 0;
-}
-#cabo div.container section {
-  width: 40%;
-}
-#cabo div.container section p {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-#vallarta {
-  background-image: url(https://i.imgur.com/phTLSJc.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: fit-content;
-}
-#vallarta div.container {
-  padding: 10rem 0;
-}
-#vallarta div.container section {
-  width: 40%;
-}
-#vallarta div.container section p {
-  font-family: "Nunito Sans", sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-  #cancun {
-    background-image: url(https://i.imgur.com/4M6hnJD.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: fit-content;
-  }
-  #cancun div.container {
-    padding: 10rem 0;
-  }
-  #cancun div.container section {
-    width: 80%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-  }
-  #cancun div.container section p {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 13px !important;
-    color: white !important;
-  }
-  #cancun div.container section p strong {
-    color: #E4C92E !important;
-  }
-  #cancun div.container section button.button {
-    width: 100%;
-  }
-
-  #cabo {
-    background-image: url(https://i.imgur.com/Iu5b5ou.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: fit-content;
-  }
-  #cabo div.container {
-    padding: 10rem 0;
-  }
-  #cabo div.container section {
-    width: 80%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-  }
-  #cabo div.container section p {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 13px !important;
-    color: white !important;
-  }
-  #cabo div.container section p strong {
-    color: #E4C92E !important;
-  }
-  #cabo div.container section button.button {
-    width: 100%;
-  }
-
-  #vallarta {
-    background-image: url(https://i.imgur.com/phTLSJc.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: fit-content;
-  }
-  #vallarta div.container {
-    padding: 10rem 0;
-  }
-  #vallarta div.container section.is-pulled-right {
-    width: 80%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    float: none !important;
-  }
-  #vallarta div.container section.is-pulled-right p {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 13px !important;
-    color: white !important;
-  }
-  #vallarta div.container section.is-pulled-right p strong {
-    color: #E4C92E !important;
-  }
-  #vallarta div.container section.is-pulled-right button.button {
-    width: 100%;
-  }
-}
-div.columns div.main-section {
-  background: #2F3239;
-}
-div.columns div.main-section nav.level div.level-left div.level-item {
-  width: 280px;
-  padding: 2rem;
-}
-div.columns div.main-section section.hero div.hero-body div.container h1.title.is-size-2 {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-div.columns div.main-section section.hero div.hero-body div.container nav.level div.level-item.has-text-centered:hover {
-  background: #464b55;
-  transition: 0.5s ease-in-out;
-}
-div.columns div.form section.hero div.hero-body div.container h1 {
-  text-transform: capitalize;
-  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-@media screen and (max-width: 1024px) {
-  div.columns div.main-section {
-    background-color: #2F3239;
-    height: fit-content;
-  }
-  div.columns section.hero div.hero-body div.container h1.title.is-size-2 {
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1rem !important;
-  }
-  div.columns section.hero div.hero-body div.container nav.level div.level-item a figure.image {
-    width: 80px;
-    height: auto;
-    margin: 0 auto;
-  }
-  div.columns div.form {
-    background: #80C6BE;
-  }
-}
-@keyframes open {
-  0% {
-    z-index: 100;
-  }
-  90% {
-    z-index: inherit;
-  }
-}
-footer.footer div.content figure {
-  width: 20rem;
-  height: auto;
-  margin: 0 auto;
-}
-footer.footer div.content nav.level {
-  margin: 0 auto;
-}
-footer.footer div.content nav.level div.level-item.has-text-centered h6 {
-  font-weight: 200;
-  color: grey;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 1024px) {
-  footer.footer {
-    display: none;
-  }
-}
-div.form {
+div.hero.is-absolute div.columns div.column section.hero {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.hero.is-absolute div.columns div.column section.hero nav.level div.level-left div.level-item {
+  width: 200px;
+  margin: 20px;
+}
+div.hero.is-absolute div.columns div.column section.hero div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.columns div.column.is-full h1 {
+  letter-spacing: 10px;
+}
+div.columns div.column.is-full div.columns div.column a figure {
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 5px;
+  transition: background 0.3s linear;
+}
+div.columns div.column.is-full div.columns div.column a h1 {
+  letter-spacing: 6px;
+  transition: color 0.3s linear;
+}
+div.columns div.column.is-full div.columns div.column:hover a figure {
+  background: #464b55;
+}
+div.columns div.column.is-full div.columns div.column:hover a h1 {
+  color: #80C6BE !important;
+}
+
+footer.footer div.columns div.column figure {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+footer.footer div.columns div.column div.columns div.column {
+  text-align: center;
+}
+footer.footer div.columns div.column div.columns div.column p {
+  font-size: 10px;
+  color: #747c8d;
+}
+
+div.hero-body.form-body {
   flex-direction: column;
   justify-content: center;
 }
-
-input {
-  margin: 1rem 0;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
-}
-
-#flexed-inputs {
+div.hero-body.form-body div#mc_embed_signup form div.is-flex {
   justify-content: space-between;
 }
-#flexed-inputs div {
-  width: 46%;
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group {
+  margin: 0;
 }
-
-#selects {
-  margin-top: 1rem;
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group:nth-of-type(1) {
+  margin-right: 10px;
+}
+div.hero-body.form-body div#mc_embed_signup form div.is-flex div.mc-field-group input {
+  width: 100%;
+}
+div.hero-body.form-body div#mc_embed_signup form div.mc-field-group {
+  margin: 10px 0;
+}
+div.hero-body.form-body div#mc_embed_signup form #selects {
   display: flex;
   justify-content: space-between;
 }
-#selects div.select {
-  width: 46%;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22) !important;
-  background: white;
+div.hero-body.form-body div#mc_embed_signup form #selects div.select select {
+  width: 80%;
 }
-
-button.button.is-primary.has-text-dark.is-large {
+div.hero-body.form-body div#mc_embed_signup form button {
   width: 100%;
-  margin-top: 2rem;
 }
 
-div.destination {
+@media screen and (max-width: 1024px) {
+  section.hero.is-fullheight.is-form {
+    min-height: fit-content !important;
+  }
+}
+div.columns#destination {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2F3239;
-  z-index: 50;
+  z-index: 100;
 }
-div.destination nav.level {
-  width: 60%;
+div.columns#destination div.column div.section {
+  background-color: rgba(0, 0, 0, 0.6);
 }
-div.destination nav.level div.level-left div.level-item {
-  width: 280px;
-  height: auto;
-  padding: 2rem;
+div.columns#destination div.column div.section p {
+  font-weight: lighter;
 }
-div.destination nav.level div.level-item.has-text-centered h1 {
-  text-transform: capitalize;
+div.columns#destination div.column div.section p strong {
+  margin-right: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  div.destination nav.level {
-    width: 100%;
+@media screen and (max-width: 769px) {
+  div.columns#destination {
+    position: initial;
   }
 }
 body {
@@ -9433,6 +9274,10 @@ body {
 
 .title, .subtitle {
   color: inherit;
+}
+
+.has-text-shadow {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .z-depth-1 {
@@ -9461,6 +9306,14 @@ body {
   left: 0%;
   right: 0%;
   bottom: 0%;
+}
+
+.columns:last-child {
+  margin-bottom: 0;
+}
+
+.columns {
+  margin: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

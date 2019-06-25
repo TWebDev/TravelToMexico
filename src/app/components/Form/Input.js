@@ -5,9 +5,9 @@ const Input = (props) => {
   {
     Type,
     Name,
-    _Id,
     Placeholder,
-    formHandler
+    inputHandler,
+    Value,
   } = props;
 
   return (
@@ -16,9 +16,10 @@ const Input = (props) => {
         className="input" 
         type={Type}
         name={Name}
-        id={_Id} 
+        value={Value}
+        id={`mce-${Name}`} 
         placeholder={Placeholder}
-        onChange={formHandler}
+        onChange={inputHandler}
       >
       </input>
     </React.Fragment>
