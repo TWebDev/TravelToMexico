@@ -5,11 +5,12 @@ const Button = (props) => {
   {
     Mods,
     children,
-    clickHandler
+    clickHandler,
+    disabled
   } = props;
   return ( 
     <React.Fragment>
-      <button className={`button ${Mods}`} onClick={clickHandler}>
+      <button className={`button ${Mods}`} onClick={clickHandler} disabled={disabled}>
         {children}
       </button>
     </React.Fragment>

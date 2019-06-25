@@ -10,10 +10,11 @@ import Vallarta from '../pages/Vallarta';
 import Footer from '../containers/Footer';
 
 const Main = (props) => {
-  let
+  var
   {
     Validate,
     inputHandler,
+    disabled,
 
     nameValue,
     lastvalue,
@@ -44,13 +45,27 @@ const Main = (props) => {
                   <Route path="/cabo" component={Cabo}/>
                   <Route path="/cancun" component={Cancun}/>
                   <Route path="/vallarta" component={Vallarta}/>   
-                  <Route path="/book" component={Form}/>
+                  <Route 
+                    path="/book" 
+                    render={ () => 
+                      <Form 
+                        inputHandler={inputHandler}
+                        disabled={disabled}
+
+                        nameValue={nameValue}
+                        lastvalue={lastvalue}
+                        phoneValue={phoneValue}
+                        emailValue={emailValue}
+                      ></Form>
+                    }                      
+                  />
                 <Footer></Footer>            
             </section>
           </div>
           <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
             <Form
               inputHandler={inputHandler}
+              disabled={disabled}
 
               nameValue={nameValue}
               lastvalue={lastvalue}

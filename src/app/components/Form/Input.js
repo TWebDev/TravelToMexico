@@ -5,10 +5,9 @@ const Input = (props) => {
   {
     Type,
     Name,
-    _Id,
     Placeholder,
     inputHandler,
-    Value
+    Value,
   } = props;
 
   return (
@@ -18,7 +17,7 @@ const Input = (props) => {
         type={Type}
         name={Name}
         value={Value}
-        id={_Id} 
+        id={`mce-${Name}`} 
         placeholder={Placeholder}
         onChange={inputHandler}
       >

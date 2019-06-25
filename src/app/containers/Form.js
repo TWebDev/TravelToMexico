@@ -7,6 +7,7 @@ const Form = (props) => {
   let
   {
     inputHandler,
+    disabled,
 
     nameValue,
     lastvalue,
@@ -22,10 +23,10 @@ const Form = (props) => {
           </h1>          
           <div id="mc_embed_signup">
             <form 
-              action=""  
+              action="https://gmail.us20.list-manage.com/subscribe/post?u=408813f962bf5808a4d27eaea&amp;id=06d479010a"  
               method="post"
-              id=""
-              name=""
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
               className="validate"
               target="_blank"
               noValidate>
@@ -33,18 +34,16 @@ const Form = (props) => {
                 <div className="mc-field-group">
                   <Input        
                   Type="text"
-                  Name="name"
-                  _Id=""
+                  Name="NAME"
                   Placeholder="First Name"
                   inputHandler={inputHandler}
-                  Value={nameValue}          
+                  Value={nameValue}      
                   ></Input>
                 </div>
                 <div className="mc-field-group">
                   <Input        
                   Type="text"
-                  Name="last"
-                  _Id=""
+                  Name="LAST"
                   Placeholder="Last Name"
                   inputHandler={inputHandler}
                   Value={lastvalue}            
@@ -54,8 +53,7 @@ const Form = (props) => {
               <div className="mc-field-group">
                 <Input        
                 Type="tel"
-                Name="phone"
-                _Id=""
+                Name="PHONE"
                 Placeholder="123-456-7890"
                 inputHandler={inputHandler}  
                 Value={phoneValue}          
@@ -64,8 +62,7 @@ const Form = (props) => {
               <div className="mc-field-group">
                 <Input        
                 Type="email"
-                Name="email"
-                _Id=""
+                Name="EMAIL"
                 Placeholder="me@mailme.com"
                 inputHandler={inputHandler}
                 Value={emailValue}           
@@ -74,13 +71,11 @@ const Form = (props) => {
               <div className="mc-field-group" id="selects">
                 <Select
                 Options={["What's the best time to call you?","9:00 am - 12:00 pm","12:00 pm - 3:00 pm","3:00 pm - 6:00 pm"]}
-                Name=""
-                _Id=""
+                Name="CALL_AT"
                 ></Select>
                 <Select
-                Options={["When are coming to Mexico?","January - April","May - August","September - December"]}
-                Name=""
-                _Id=""
+                Options={["When are you coming to Mexico?","January - April","May - August","September - December"]}
+                Name="PREF_DATES"
                 ></Select>
               </div>                                    
               <Button
@@ -88,6 +83,7 @@ const Form = (props) => {
                 Type="submit"
                 Value="Subscribe"
                 _Id="mc-embedded-subscribe"
+                disabled={disabled}
               >
                 Begin your experience
               </Button>          
