@@ -69,14 +69,16 @@ const Form = (props) => {
               ></Input>
               </div>    
               <div className="mc-field-group" id="selects">
+                <label htmlFor="mce-CALL_AT">What's the best time to call you? </label>
                 <Select
-                Options={["What's the best time to call you?","9:00 am - 12:00 pm","12:00 pm - 3:00 pm","3:00 pm - 6:00 pm"]}
+                Options={["","9:00 am - 12:00 pm","12:00 pm - 3:00 pm","3:00 pm - 6:00 pm"]}
                 Name="CALL_AT"
-                ></Select>
+                >What's the best time to call you?</Select>
+                <label htmlFor="mce-PREF_DATES">When are you coming to Mexico? </label>
                 <Select
-                Options={["When are you coming to Mexico?","January - April","May - August","September - December"]}
+                Options={["","January - April","May - August","September - December"]}
                 Name="PREF_DATES"
-                ></Select>
+                >When are you coming to Mexico?</Select>
               </div>                                    
               <Button
                 Mods="is-primary has-text-dark is-large"

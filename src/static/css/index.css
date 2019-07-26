@@ -9316,4 +9316,8 @@ body {
   margin: 0;
 }
 
+label.label {
+  color: whitesmoke;
+}
+
 /*# sourceMappingURL=index.css.map */

@@ -2,7 +2,7 @@ import React from 'react';
 import Figure from '../components/Figure';
 import Logo from '../../static/images/svg/TM_Logo_1SVG.svg'
 import Navbar from '../containers/Navbar';
-import Form from '../containers/Form';
+import HeroForm from '../containers/HeroForm';
 import { Route, Link } from 'react-router-dom';
 import Cabo from '../pages/Cabo';
 import Cancun from '../pages/Cancun';
@@ -45,33 +45,12 @@ const Main = (props) => {
                   <Route path="/cabo" component={Cabo}/>
                   <Route path="/cancun" component={Cancun}/>
                   <Route path="/vallarta" component={Vallarta}/>   
-                  <Route 
-                    path="/book" 
-                    render={ () => 
-                      <Form 
-                        inputHandler={inputHandler}
-                        disabled={disabled}
-
-                        nameValue={nameValue}
-                        lastvalue={lastvalue}
-                        phoneValue={phoneValue}
-                        emailValue={emailValue}
-                      ></Form>
-                    }                      
-                  />
+                  <div className="is-hidden-desktop"><HeroForm></HeroForm></div>
                 <Footer></Footer>            
             </section>
           </div>
           <div className="column is-paddingless is-hidden-touch is-hidden-desktop-only">
-            <Form
-              inputHandler={inputHandler}
-              disabled={disabled}
-
-              nameValue={nameValue}
-              lastvalue={lastvalue}
-              phoneValue={phoneValue}
-              emailValue={emailValue}
-            ></Form>
+            <HeroForm></HeroForm>
           </div>
         </div>
       </div>
