@@ -10,5 +10,30 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+    </script>
+    <script type='text/javascript'>
+      (
+        function($) 
+        {
+          window.fnames = new Array(); 
+          window.ftypes = new Array();
+          fnames[0]='NAME';
+          ftypes[0]='text';
+          fnames[1]='LAST';
+          ftypes[1]='text';
+          fnames[4]='EMAIL';
+          ftypes[4]='email';
+          fnames[3]='PHONE';
+          ftypes[3]='phone';
+          fnames[4]='CALL_AT';
+          ftypes[4]='dropdown';
+          fnames[5]='PREF_DATES';
+          ftypes[5]='dropdown';
+        }
+        (jQuery)
+      );
+        var $mcj = jQuery.noConflict(true);
+    </script>
   </body>
 </html>
